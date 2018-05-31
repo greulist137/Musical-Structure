@@ -12,6 +12,21 @@ public class Music {
         mArtist = artist;
         mSongs = songs;
         mprices = prices;
+    }
 
+    public String getAlbum(){
+        return mAlbum;
+    }
+
+    public String getArtist(){
+        return mArtist;
+    }
+
+    public String[] getSongs(){
+        return mSongs;
+    }
+
+    public double[] getPrices(){
+        return mprices;
     }
 }
