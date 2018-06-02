@@ -1,16 +1,46 @@
 package com.example.greul.musicalstructure;
 
+import android.location.Location;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.TextView;
+
+import java.util.ArrayList;
 
 public class LibraryActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.library_view);
+
+        // Create a list of locations
+        final ArrayList<Music> music = new ArrayList<Music>();
+        music.add(new Location("2389 Stratford Dr, Austin, TX 78746", "Austin Nature & Science Center", R.drawable.nature_original, "Education"));
+
+        // Create an {@link MusicAdapter}, whose data source is a list of {@link Music}s. The
+        // adapter knows how to create list items for each item in the list.
+        MusicAdapter adapter = new MusicAdapter(this, music);
+
+        // Find the {@link ListView} object in the view hierarchy of the {@link Activity}.
+        ListView listView = (ListView) findViewById(R.id.list);
+
+        // Make the {@link ListView} use the {@link WordAdapter} we created above, so that the
+        // {@link ListView} will display list items for each {@link Location} in the list.
+        listView.setAdapter(adapter);
+
+        // Set a click listener to play the audio when the list item is clicked on
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+
+                // Get the {@link Music} object at the given position the user clicked on
+                Music newMusic = music.get(position);
+            }
+        });
 
     }
 }
