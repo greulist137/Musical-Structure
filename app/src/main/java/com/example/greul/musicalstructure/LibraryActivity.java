@@ -15,11 +15,11 @@ public class LibraryActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.library_view);
+        setContentView(R.layout.word_list);
 
         // Create a list of locations
         final ArrayList<Music> music = new ArrayList<Music>();
-        music.add(new Location("2389 Stratford Dr, Austin, TX 78746", "Austin Nature & Science Center", R.drawable.nature_original, "Education"));
+        music.add(new Music("Band", "Album", "Song", 5.99, R.drawable.nature_original));
 
         // Create an {@link MusicAdapter}, whose data source is a list of {@link Music}s. The
         // adapter knows how to create list items for each item in the list.
