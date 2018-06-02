@@ -41,10 +41,8 @@
             android:id="@+id/artist_text_view"
             android:layout_width="match_parent"
             android:layout_height="44dp"
-            android:layout_weight="1"
             android:gravity="bottom"
             android:textAppearance="?android:textAppearanceMedium"
-            android:textColor="@android:color/white"
             android:textStyle="bold"
             tools:text="lutti" />
 
@@ -53,10 +51,8 @@
             android:layout_width="match_parent"
             android:layout_height="44dp"
             android:layout_below="@id/artist_text_view"
-            android:layout_weight="1"
             android:gravity="center|left"
             android:textAppearance="?android:textAppearanceMedium"
-            android:textColor="@android:color/white"
             tools:text="one" />
 
         <TextView
@@ -64,10 +60,8 @@
             android:layout_width="match_parent"
             android:layout_height="44dp"
             android:layout_below="@id/album_text_view"
-            android:layout_weight="1"
             android:gravity="top"
             android:textAppearance="?android:textAppearanceMedium"
-            android:textColor="@android:color/white"
             tools:text="one" />
 
     </RelativeLayout>

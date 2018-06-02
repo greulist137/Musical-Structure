@@ -19,6 +19,10 @@
         <activity
             android:name=".LibraryActivity"
             android:label="Library" />
+
+        <activity
+            android:name=".StoreActivity"
+            android:label="Store" />
     </application>
 
 </manifest>
