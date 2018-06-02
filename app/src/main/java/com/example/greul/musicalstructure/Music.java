@@ -9,13 +9,20 @@ public class Music {
     private static final int NO_IMAGE_PROVIDED = -1;
     private int mImageResourceID = NO_IMAGE_PROVIDED;
 
-    public Music(String album, String artist, String songs, double prices, int imageResourceID){
+    public Music(String album, String artist, String songs, int imageResourceID){
         mAlbum = album;
         mArtist = artist;
         mSongs = songs;
+        mImageResourceID = imageResourceID;
+    }
+
+    public Music(String album, String artist, double prices, int imageResourceID){
+        mAlbum = album;
+        mArtist = artist;
         mprices = prices;
         mImageResourceID = imageResourceID;
     }
+
 
     public String getAlbum(){
         return mAlbum;

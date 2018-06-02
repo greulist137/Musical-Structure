@@ -19,7 +19,7 @@ public class LibraryActivity extends AppCompatActivity {
 
         // Create a list of locations
         final ArrayList<Music> music = new ArrayList<Music>();
-        music.add(new Music("Band", "Album", "Song", 5.99, R.drawable.nature_original));
+        music.add(new Music("Band", "Album", "Song", R.drawable.nature_original));
 
         // Create an {@link MusicAdapter}, whose data source is a list of {@link Music}s. The
         // adapter knows how to create list items for each item in the list.
