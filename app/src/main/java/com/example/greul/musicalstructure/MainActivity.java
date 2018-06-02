@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         LinearLayout store = (LinearLayout) findViewById(R.id.store);
-        library.setOnClickListener(new View.OnClickListener() {
+        store.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent StoreIntent = new Intent(MainActivity.this, StoreActivity.class);

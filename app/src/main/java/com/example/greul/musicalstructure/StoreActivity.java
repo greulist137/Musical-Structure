@@ -20,7 +20,7 @@ public class StoreActivity extends AppCompatActivity {
 
         // Create an {@link MusicAdapter}, whose data source is a list of {@link Music}s. The
         // adapter knows how to create list items for each item in the list.
-        MusicAdapter adapter = new MusicAdapter(this, music);
+        StoreAdapter adapter = new StoreAdapter(this, music);
 
         // Find the {@link ListView} object in the view hierarchy of the {@link Activity}.
         ListView listView = (ListView) findViewById(R.id.list);
