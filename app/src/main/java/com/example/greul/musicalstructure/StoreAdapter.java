@@ -29,7 +29,7 @@ import java.util.ArrayList;
  * Music Adapter is an {@link ArrayAdapter} that can provide the layout for each list item
  * based on a data source, which is a list of Music objects.
  */
-public class MusicAdapter extends ArrayAdapter<Music> {
+public class StoreAdapter extends ArrayAdapter<Music> {
 
     /**
      * Create a new Music Adapter object.
@@ -37,7 +37,7 @@ public class MusicAdapter extends ArrayAdapter<Music> {
      * @param context is the current context (i.e. Activity) that the adapter is being created in.
      * @param words is the list of Musics to be displayed.
      */
-    public MusicAdapter(Context context, ArrayList<Music> words) {
+    public StoreAdapter(Context context, ArrayList<Music> words) {
         super(context, 0, words);
     }
 
@@ -47,7 +47,7 @@ public class MusicAdapter extends ArrayAdapter<Music> {
         View listItemView = convertView;
         if (listItemView == null) {
             listItemView = LayoutInflater.from(getContext()).inflate(
-                    R.layout.library_item, parent, false);
+                    R.layout.store_item, parent, false);
         }
 
         // Get the {@link Music} object located at this position in the list
@@ -64,6 +64,10 @@ public class MusicAdapter extends ArrayAdapter<Music> {
         // Find the TextView in the library_itemtem.xml layout with the ID song_text_view.
         TextView songTextView = (TextView) listItemView.findViewById(R.id.song_text_view);
         songTextView.setText(currentMusic.getSongs());
+
+        // Find the TextView in the library_itemtem.xml layout with the ID price_text_view.
+        TextView priceTextView = (TextView) listItemView.findViewById(R.id.price_text_view);
+        priceTextView.setText(Double.toString(currentMusic.getPrices()));
 
         // Find the ImageView in the library_itemtem.xml layout with the ID image.
         ImageView imageView = (ImageView) listItemView.findViewById(R.id.image);

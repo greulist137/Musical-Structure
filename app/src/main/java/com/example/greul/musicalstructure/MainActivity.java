@@ -22,5 +22,14 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(LibraryIntent);
             }
         });
+
+        LinearLayout store = (LinearLayout) findViewById(R.id.store);
+        library.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent StoreIntent = new Intent(MainActivity.this, StoreActivity.class);
+                startActivity(StoreIntent);
+            }
+        });
     }
 }
