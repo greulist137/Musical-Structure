@@ -31,5 +31,14 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(StoreIntent);
             }
         });
+
+        LinearLayout playing = (LinearLayout) findViewById(R.id.now_playing);
+        playing.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent PlayingIntent = new Intent(MainActivity.this, PlayingActivity.class);
+                startActivity(PlayingIntent);
+            }
+        });
     }
 }

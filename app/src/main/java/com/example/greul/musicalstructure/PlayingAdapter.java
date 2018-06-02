@@ -47,7 +47,7 @@ public class PlayingAdapter extends ArrayAdapter<Music> {
         View listItemView = convertView;
         if (listItemView == null) {
             listItemView = LayoutInflater.from(getContext()).inflate(
-                    R.layout.store_item, parent, false);
+                    R.layout.playing_item, parent, false);
         }
 
         // Get the {@link Music} object located at this position in the list
@@ -65,9 +65,6 @@ public class PlayingAdapter extends ArrayAdapter<Music> {
         TextView songTextView = (TextView) listItemView.findViewById(R.id.song_text_view);
         songTextView.setText(currentMusic.getSongs());
 
-        // Find the TextView in the library_itemtem.xml layout with the ID price_text_view.
-        TextView priceTextView = (TextView) listItemView.findViewById(R.id.price_text_view);
-        priceTextView.setText(Double.toString(currentMusic.getPrices()));
 
         // Find the ImageView in the library_itemtem.xml layout with the ID image.
         ImageView imageView = (ImageView) listItemView.findViewById(R.id.image);

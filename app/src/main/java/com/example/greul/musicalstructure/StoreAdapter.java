@@ -61,10 +61,6 @@ public class StoreAdapter extends ArrayAdapter<Music> {
         TextView albumTextView = (TextView) listItemView.findViewById(R.id.album_text_view);
         albumTextView.setText(currentMusic.getAlbum());
 
-        // Find the TextView in the library_itemtem.xml layout with the ID song_text_view.
-        TextView songTextView = (TextView) listItemView.findViewById(R.id.song_text_view);
-        songTextView.setText(currentMusic.getSongs());
-
         // Find the TextView in the library_itemtem.xml layout with the ID price_text_view.
         TextView priceTextView = (TextView) listItemView.findViewById(R.id.price_text_view);
         priceTextView.setText(Double.toString(currentMusic.getPrices()));

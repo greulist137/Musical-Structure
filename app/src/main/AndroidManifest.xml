@@ -23,6 +23,11 @@
         <activity
             android:name=".StoreActivity"
             android:label="Store" />
+
+        <activity
+            android:name=".PlayingActivity"
+            android:label="Now Playing" />
+
     </application>
 
 </manifest>
