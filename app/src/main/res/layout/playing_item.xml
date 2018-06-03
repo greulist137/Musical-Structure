@@ -44,6 +44,7 @@
             android:gravity="bottom"
             android:textAppearance="?android:textAppearanceMedium"
             android:textStyle="bold"
+            android:text="-"
             tools:text="lutti" />
 
         <TextView
@@ -53,6 +54,7 @@
             android:layout_below="@id/artist_text_view"
             android:gravity="center|left"
             android:textAppearance="?android:textAppearanceMedium"
+            android:text="-"
             tools:text="one" />
 
         <TextView
@@ -61,6 +63,7 @@
             android:layout_height="44dp"
             android:layout_below="@id/album_text_view"
             android:gravity="top"
+            android:text="-"
             android:textAppearance="?android:textAppearanceMedium"
             tools:text="one" />
 

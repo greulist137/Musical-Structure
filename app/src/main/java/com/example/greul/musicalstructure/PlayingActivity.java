@@ -4,7 +4,9 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -12,32 +14,19 @@ public class PlayingActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.word_list);
+        setContentView(R.layout.playing_item);
 
-        // Create a list of locations
-        final ArrayList<Music> music = new ArrayList<Music>();
-        music.add(new Music("Band", "Album", "PLAYING", R.drawable.nature_original));
+        TextView artistTextView = (TextView) findViewById(R.id.artist_text_view);
+        artistTextView.setText("TEST");
 
-        // Create an {@link MusicAdapter}, whose data source is a list of {@link Music}s. The
-        // adapter knows how to create list items for each item in the list.
-        PlayingAdapter adapter = new PlayingAdapter(this, music);
+        // Find the TextView with the ID album_text_view.
+        TextView albumTextView = (TextView) findViewById(R.id.album_text_view);
+        albumTextView.setText("TEST");
 
-        // Find the {@link ListView} object in the view hierarchy of the {@link Activity}.
-        ListView listView = (ListView) findViewById(R.id.list);
+        // Find the TextView with the ID song_text_view.
+        TextView songTextView = (TextView) findViewById(R.id.song_text_view);
+        songTextView.setText("TEST");
 
-        // Make the {@link ListView} use the {@link WordAdapter} we created above, so that the
-        // {@link ListView} will display list items for each {@link Location} in the list.
-        listView.setAdapter(adapter);
-
-        // Set a click listener to play the audio when the list item is clicked on
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
-
-                // Get the {@link Music} object at the given position the user clicked on
-                Music newMusic = music.get(position);
-            }
-        });
 
     }
 }
