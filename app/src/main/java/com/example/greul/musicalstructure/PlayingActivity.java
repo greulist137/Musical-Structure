@@ -17,16 +17,29 @@ public class PlayingActivity extends AppCompatActivity {
         setContentView(R.layout.playing_item);
 
         TextView artistTextView = (TextView) findViewById(R.id.artist_text_view);
-        artistTextView.setText("TEST");
+        artistTextView.setText("-");
 
         // Find the TextView with the ID album_text_view.
         TextView albumTextView = (TextView) findViewById(R.id.album_text_view);
-        albumTextView.setText("TEST");
+        albumTextView.setText("-");
 
         // Find the TextView with the ID song_text_view.
         TextView songTextView = (TextView) findViewById(R.id.song_text_view);
         songTextView.setText("TEST");
 
 
+    }
+
+    public void setNowPlaying(String artist, String album, String song){
+        TextView artistTextView = (TextView) findViewById(R.id.artist_text_view);
+        artistTextView.setText(artist);
+
+        // Find the TextView with the ID album_text_view.
+        TextView albumTextView = (TextView) findViewById(R.id.album_text_view);
+        albumTextView.setText(album);
+
+        // Find the TextView with the ID song_text_view.
+        TextView songTextView = (TextView) findViewById(R.id.song_text_view);
+        songTextView.setText(song);
     }
 }
