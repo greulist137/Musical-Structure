@@ -34,7 +34,7 @@ public class LibraryActivity extends AppCompatActivity {
         // {@link ListView} will display list items for each {@link Location} in the list.
         listView.setAdapter(adapter);
 
-        // Set a click listener to play the audio when the list item is clicked on
+  /*      // Set a click listener to play the audio when the list item is clicked on
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
@@ -44,6 +44,6 @@ public class LibraryActivity extends AppCompatActivity {
                PlayingActivity newPlaying = new PlayingActivity(playing.getArtist(), playing.getAlbum(), playing.getSongs());
           }
       });
-
+*/
     }
 }
