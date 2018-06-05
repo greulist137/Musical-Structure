@@ -1,6 +1,8 @@
 package com.example.greul.musicalstructure;
 
 import android.location.Location;
+import android.media.AudioManager;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -37,10 +39,11 @@ public class LibraryActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
 
-                // Get the {@link Music} object at the given position the user clicked on
-                Music newMusic = music.get(position);
-            }
-        });
+               // Get the {@link Music} object at the given position the user clicked on
+               Music playing = music.get(position);
+               PlayingActivity newPlaying = new PlayingActivity(playing.getArtist(), playing.getAlbum(), playing.getSongs());
+          }
+      });
 
     }
 }
